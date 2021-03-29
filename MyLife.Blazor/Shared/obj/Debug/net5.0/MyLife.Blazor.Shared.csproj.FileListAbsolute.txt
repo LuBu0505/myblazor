@@ -1,0 +1,12 @@
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\bin\Debug\net5.0\MyLife.Blazor.Shared.deps.json
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\bin\Debug\net5.0\MyLife.Blazor.Shared.dll
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\bin\Debug\net5.0\ref\MyLife.Blazor.Shared.dll
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\bin\Debug\net5.0\MyLife.Blazor.Shared.pdb
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.AssemblyInfoInputs.cache
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.AssemblyInfo.cs
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.csproj.CoreCompileInputs.cache
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.dll
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\ref\MyLife.Blazor.Shared.dll
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.pdb
+C:\LBWorkSpace\MyCode\MyLife\MyLife.Blazor\MyLife.Blazor\Shared\obj\Debug\net5.0\MyLife.Blazor.Shared.csprojAssemblyReference.cache
