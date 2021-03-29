@@ -34,3 +34,27 @@ jobs:
       - name: dotnet publish 
         run: |
           dotnet publish -c Release -o myapp 
+      # Log into Azure
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          environment: AzureChinaCloud         
+    
+      # deploy web app using Azure credentials
+      - name: 'Azure webapp deploy'
+        uses: azure/webapps-deploy@v1
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: './myapp' 
+
+
+      - name: Azure WebApp      
+        uses: Azure/webapps-deploy@v2
+        with:
+          # Name of the Azure Web App
+          app-name: myblazor
+          # Applies to Web Apps(Windows and Linux) and Web App Containers(linux). Multi container scenario not supported. Publish profile (*.publishsettings) file contents with Web Deploy secrets
+          publish-profile: <publishData><publishProfile profileName="myblazor - Web Deploy" publishMethod="MSDeploy" publishUrl="myblazor.scm.chinacloudsites.cn:443" msdeploySite="myblazor" userName="$myblazor" userPWD="FEKBkKAuqEEJf62QjCBh90w7dyk4ivdeLZxLiBzRKkvbbShgvzuzueobqo4m" destinationAppUrl="http://myblazor.chinacloudsites.cn" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://manage.windowsazure.cn" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="myblazor - FTP" publishMethod="FTP" publishUrl="ftp://cnws-prod-sha20-005.ftp.chinacloudsites.chinacloudapi.cn/site/wwwroot" ftpPassiveMode="True" userName="myblazor\$myblazor" userPWD="FEKBkKAuqEEJf62QjCBh90w7dyk4ivdeLZxLiBzRKkvbbShgvzuzueobqo4m" destinationAppUrl="http://myblazor.chinacloudsites.cn" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://manage.windowsazure.cn" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="myblazor - Zip Deploy" publishMethod="ZipDeploy" publishUrl="myblazor.scm.chinacloudsites.cn:443" userName="$myblazor" userPWD="FEKBkKAuqEEJf62QjCBh90w7dyk4ivdeLZxLiBzRKkvbbShgvzuzueobqo4m" destinationAppUrl="http://myblazor.chinacloudsites.cn" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://manage.windowsazure.cn" webSystem="WebSites"><databases /></publishProfile></publishData>         
+          # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+          package: './myapp' 
+    
