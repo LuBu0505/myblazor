@@ -19,7 +19,7 @@ jobs:
     - name: Azure Login
       uses: Azure/login@v1.4.6
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: '{"appId": "5735fa60-62c4-4b04-899f-f8b0d29e9fbb","displayName": "azure-cli-2022-12-29-08-14-22","name": "5735fa60-62c4-4b04-899f-f8b0d29e9fbb","password": "bmJYPpjrxmA0kqYzlSto..d2gStErum8m7","tenant": "954ddad8-66d7-47a8-8f9f-1316152d9587"}'
         environment: AzureChinaCloud
     
     - name: Azure CLI script
