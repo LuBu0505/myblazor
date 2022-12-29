@@ -8,7 +8,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
+    - name: azure az update
+      uses: azure/CLI@v1
+      with:
+        aucliversion: 2.30.0
+        inlinescript: |
+          az --version
+      
     - name: Azure Login
       uses: Azure/login@v1.4.6
       with:
