@@ -1,4 +1,4 @@
-#modify the file to run again
+#modify the file to run again 1
 on: [push]
 
 name: AzureCLISample
