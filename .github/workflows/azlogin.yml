@@ -15,7 +15,7 @@ jobs:
         inlinescript: |
           az --version
           az cloud set --name AzureChinaCloud
-          az login -u bulu@mcpod.partner.onmschina.cn -p Password@345
+          az login -u bulu@mcpod.partner.onmschina.cn -p Password@345 --debug
       
     - name: Azure Login
       uses: Azure/login@v1.4.6
