@@ -6,7 +6,9 @@ name: AzureCLISample
 jobs:
 
   build-and-deploy:
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
+    
     steps:
     #- name: azure az update
       #uses: azure/CLI@v1
