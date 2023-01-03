@@ -8,13 +8,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: azure az update
-      uses: azure/CLI@v1
-      with:
-        aucliversion: 2.30.0
-        inlinescript: |
-          az --version
-          az cloud set --name AzureChinaCloud
+    #- name: azure az update
+      #uses: azure/CLI@v1
+      #with:
+        #aucliversion: 2.30.0
+        #inlinescript: |
+          #az --version
+          #az cloud set --name AzureChinaCloud
           #az login -u bulu@mcpod.partner.onmschina.cn -p Password@345 --debug
       
     - name: Azure Login
