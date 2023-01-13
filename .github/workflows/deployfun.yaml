@@ -28,7 +28,11 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         environment: AzureChinaCloud
-    #    # allow-no-subscriptions: true
+        allow-no-subscriptions: true
+    
+    - name: 'set subscriptions'
+      run: |
+          az account set --subscription "a9dc7515-7692-4316-9ad4-762f383eec10"
 
     - name: 'Docker Login'
       uses: azure/docker-login@v1
@@ -36,6 +40,7 @@ jobs:
         login-server: lbacrtest01.azurecr.cn
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+      
 
     # - name: 'Compose Customized Docker Image'
     #   shell: bash
