@@ -34,7 +34,7 @@ jobs:
     - name: 'set subscriptions'
       run: |
           az cloud set --name AzureChinaCloud
-          az login -u bulu@mcpod.partner.onmschina.cn -p 8ik,(OL>0p;/
+          az login -u bulu@mcpod.partner.onmschina.cn -p "8ik,(OL>0p;/" --debug
           az account set --subscription "a9dc7515-7692-4316-9ad4-762f383eec10"
 
     - name: 'Docker Login'
