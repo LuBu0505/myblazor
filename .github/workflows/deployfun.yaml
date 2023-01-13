@@ -24,11 +24,12 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 'Login via Azure CLI'
-      uses: azure/login@v1
+      uses: Azure/login@v1.4.6
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         environment: AzureChinaCloud
-        allow-no-subscriptions: true
+        subscription-id: a9dc7515-7692-4316-9ad4-762f383eec10
+        #allow-no-subscriptions: true
     
     - name: 'set subscriptions'
       run: |
