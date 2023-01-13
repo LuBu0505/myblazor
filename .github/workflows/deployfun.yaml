@@ -25,7 +25,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        environment:'AzureChinaCloud'
+        environment: AzureChinaCloud
 
     - name: 'Docker Login'
       uses: azure/docker-login@v1
