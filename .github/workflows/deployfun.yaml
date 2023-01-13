@@ -65,7 +65,7 @@ jobs:
                   {
                     "name": "DOCKER_REGISTRY_SERVER_URL",
                     "value": "https://lbacrtest01.azurecr.cn", 
-                    "slotSetting": false
+                    "slotSetting": true
                   }
                 ] 
 
