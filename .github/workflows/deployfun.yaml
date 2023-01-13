@@ -64,18 +64,18 @@ jobs:
                 [
                   {
                     "name": "DOCKER_REGISTRY_SERVER_URL",
-                    "value": "https://lbacrtest01.azurecr.cn", 
-                    "slotSetting": true
+                    "value": "https://lbacrtest01.azurecr.cn/123", 
+                    "slotSetting": false
                   }
                 ] 
 
-    - name: 'Run Azure Functions Container Action'
-      uses: Azure/functions-container-action@v1
-      id: fa
-      with:
-        app-name: lbfuncontainertest01
-        image: lbacrtest01.azurecr.cn/azurefunctionimage:v1
-        #image: azurefunctionimage:v1
+   # - name: 'Run Azure Functions Container Action'
+   #   uses: Azure/functions-container-action@v1
+   #   id: fa
+   #   with:
+   #     app-name: lbfuncontainertest01
+   #     image: lbacrtest01.azurecr.cn/azurefunctionimage:v1
+   #     #image: azurefunctionimage:v1
 
     #- name: 'use the published functionapp url in upcoming steps'
     #  run: |
