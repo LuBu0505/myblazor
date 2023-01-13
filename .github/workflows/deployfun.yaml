@@ -8,10 +8,12 @@
 
 name: Linux_Container_Workflow
 
-on:
-  push:
-    branches:
-    - master
+on: [push]
+
+#on:
+#  push:
+#    branches:
+#    - master
 
 jobs:
   build-and-deploy:
