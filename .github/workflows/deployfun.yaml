@@ -75,7 +75,7 @@ jobs:
       with:
         app-name: lbfuncontainertest01
         #image: docker pull lbacrtest01.azurecr.cn/azurefunctionimage:v1
-        image: docker pull "azurefunctionimage:v1"
+        image: docker pull azurefunctionimage:v1
 
     #- name: 'use the published functionapp url in upcoming steps'
     #  run: |
