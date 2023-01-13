@@ -28,14 +28,14 @@ jobs:
     #  with:
     #    creds: ${{ secrets.AZURE_CREDENTIALS }}
     #    environment: AzureChinaCloud
-    #    subscription-id: a9dc7515-7692-4316-9ad4-762f383eec10
+    #    subscription-id:xxxxxxxxxxxxxx
     #    #allow-no-subscriptions: true
     
     - name: 'set subscriptions'
       run: |
           az cloud set --name AzureChinaCloud
-          az login -u bulu@mcpod.partner.onmschina.cn -p "8ik,(OL>0p;/" 
-          az account set --subscription "a9dc7515-7692-4316-9ad4-762f383eec10"
+          az login -u xxxxx-p xxxxxxxx 
+          az account set --subscription  xxxxxx
 
     - name: 'Docker Login'
       uses: azure/docker-login@v1
@@ -59,12 +59,12 @@ jobs:
       with:
         # Name of the Azure Web App
         app-name: lbfuncontainertest01
-        general-settings-json: '{"acrUseManagedIdentityCreds": "true", "acrUserManagedIdentityID": "b99b1f52-12a6-41f8-8465-118477fee0b5"}'
+        general-settings-json: '{"acrUseManagedIdentityCreds": "true", "acrUserManagedIdentityID": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"}'
         app-settings-json: |
                 [
                   {
                     "name": "DOCKER_REGISTRY_SERVER_URL",
-                    "value": "https://lbacrtest01.azurecr.cn/123", 
+                    "value": "https://xxxxxxxxxx.azurecr.cn/123", 
                     "slotSetting": false
                   }
                 ] 
@@ -74,8 +74,8 @@ jobs:
    #   id: fa
    #   with:
    #     app-name: lbfuncontainertest01
-   #     image: lbacrtest01.azurecr.cn/azurefunctionimage:v1
-   #     #image: azurefunctionimage:v1
+   #     image: xxxxxxxxxxxxx.azurecr.cn/azurefunctionimage:v1
+   #     #image: xxxxxxxxxxxxx:v1
 
     #- name: 'use the published functionapp url in upcoming steps'
     #  run: |
