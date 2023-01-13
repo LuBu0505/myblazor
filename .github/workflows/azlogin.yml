@@ -1,5 +1,6 @@
 #modify the file to run again 1
-on: [push]
+#disable this workflow @2023-01-13
+#on: [push]
 
 name: AzureCLISample
 
