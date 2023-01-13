@@ -23,16 +23,18 @@ jobs:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v3
 
-    - name: 'Login via Azure CLI'
-      uses: Azure/login@v1.4.6
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-        environment: AzureChinaCloud
-        subscription-id: a9dc7515-7692-4316-9ad4-762f383eec10
-        #allow-no-subscriptions: true
+    #- name: 'Login via Azure CLI'
+    #  uses: Azure/login@v1.4.6
+    #  with:
+    #    creds: ${{ secrets.AZURE_CREDENTIALS }}
+    #    environment: AzureChinaCloud
+    #    subscription-id: a9dc7515-7692-4316-9ad4-762f383eec10
+    #    #allow-no-subscriptions: true
     
     - name: 'set subscriptions'
       run: |
+          az cloud set --name AzureChinaCloud
+          az login -u bulu@mcpod.partner.onmschina.cn -p 8ik,(OL>0p;/
           az account set --subscription "a9dc7515-7692-4316-9ad4-762f383eec10"
 
     - name: 'Docker Login'
